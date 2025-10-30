@@ -1,32 +1,39 @@
-
-
 ```markdown
 # 💹 Finance Q&A Assistant — Education, not Advice (2025)
 
-A conversational AI application that helps users **learn financial concepts responsibly** using **Groq's high-speed LLM inference** and **Streamlit**.  
-This assistant explains macroeconomics, investing basics, budgeting, portfolio risk, and fraud awareness — but **never provides financial advice**.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
+![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Groq](https://img.shields.io/badge/Powered%20by-Groq-orange)
+
+🌐 **Live Demo:** [https://finance-qna-assistant.streamlit.app](https://finance-qna-assistant.streamlit.app)
+
+A conversational AI application that helps users **learn financial concepts responsibly** using **Groq’s high-speed LLM inference** and **Streamlit’s interactive UI**.  
+The assistant explains macroeconomics, investing basics, budgeting, portfolio risk, and fraud awareness — but **never provides financial, investment, or tax advice**.
 
 ---
 
 ## 🚀 Overview
 
 **Finance Q&A Assistant** is an interactive educational chatbot built on top of:
-- **Groq LLM (Llama 3.3 70B Versatile)** — for ultra-fast, accurate financial explanations  
-- **LangChain** — for message orchestration and context management  
-- **Streamlit** — for a clean, modern chat-based user interface  
 
-The goal is to make **finance literacy accessible**, transparent, and compliant with educational use.
+- **Groq LLM (Llama 3.3 70B Versatile)** — ultra-fast, high-quality financial explanations  
+- **LangChain** — message orchestration and context management  
+- **Streamlit** — clean, chat-style educational interface  
+
+The goal is to make **financial literacy accessible**, transparent, and safe through guided education.
 
 ---
 
 ## 🧠 Key Features
 
 ✅ Real-time Q&A on markets, investing, and personal finance  
-✅ Mode-based context selection for specific topics  
-✅ Ethical safeguards — no investment or tax recommendations  
-✅ “Market Notes” panel to personalize context (CPI, Fed rates, earnings, etc.)  
+✅ Mode-based context selection for focused learning  
+✅ Ethical safeguards — no investment or prediction responses  
+✅ “Market Notes” panel for user-provided financial context (CPI, Fed, earnings, etc.)  
 ✅ Context-aware conversation memory  
-✅ Groq-powered speed for smooth educational interactions  
+✅ Groq-powered low-latency responses  
+✅ Deployable instantly on Streamlit Cloud  
 
 ---
 
@@ -44,8 +51,7 @@ LangChain Message Pipeline
 Groq API (Llama-3.3-70B-Versatile)
 │
 ▼
-Educational Response Generation
-(Filtered, Contextual, Safe)
+Educational Response Generation (filtered, safe, and contextual)
 
 ````
 
@@ -58,8 +64,8 @@ Educational Response Generation
 | **Frontend / UI** | Streamlit |
 | **LLM Backend** | Groq API (Llama-3.3-70B-Versatile) |
 | **Framework** | LangChain ≥ 0.3 |
-| **Environment** | Python 3.10 + virtual env |
-| **Config** | `.env` for secure API key storage |
+| **Environment** | Python 3.10 + virtual environment |
+| **Config** | `.env` for secure API key handling |
 
 ---
 
@@ -76,7 +82,7 @@ cd Finance-QnA-Assistant
 ```bash
 python -m venv .venv
 .venv\Scripts\activate        # on Windows
-# or source .venv/bin/activate  (Mac/Linux)
+# or source .venv/bin/activate  # on Mac/Linux
 ```
 
 ### 3️⃣ Install dependencies
@@ -101,39 +107,26 @@ streamlit run app.py
 
 ---
 
-## 🧮 Project Structure
+## 🗂️ Learning Modes
 
-```
-Finance-QnA-Assistant/
-│
-├── app.py                # Main Streamlit application
-├── requirements.txt      # Dependencies
-├── .env.example          # Example environment variables
-└── README.md             # Project documentation
-```
-
----
-
-## 🗂️ Modes of Learning
-
-| Mode                          | Description                                              |
-| ----------------------------- | -------------------------------------------------------- |
-| **Markets & Macro**           | Inflation, interest rates, yield curves, GDP, employment |
-| **Investing 101**             | Stocks, bonds, ETFs, diversification, compounding        |
-| **Risk & Portfolio Concepts** | Volatility, correlation, Sharpe ratio, drawdown          |
-| **Personal Finance**          | Budgeting, debt, goals, emergency funds                  |
-| **Fraud & Scam Watch (2025)** | Deepfake, phishing, “guaranteed return” scams            |
-| **Crypto Basics**             | Blockchain, wallets, stablecoins, private-key safety     |
+| Mode                          | Description                                                |
+| ----------------------------- | ---------------------------------------------------------- |
+| **Markets & Macro**           | Inflation, interest rates, GDP, employment, yield curves   |
+| **Investing 101**             | Stocks, bonds, ETFs, diversification, compounding          |
+| **Risk & Portfolio Concepts** | Volatility, correlation, Sharpe ratio, drawdown            |
+| **Personal Finance**          | Budgeting, debt, emergency funds, financial goals          |
+| **Fraud & Scam Watch (2025)** | Deepfake scams, phishing, fake “guaranteed return” schemes |
+| **Crypto Basics**             | Blockchain, wallets, stablecoins, private key safety       |
 
 ---
 
-## 🧭 Example Prompts
+## 💬 Example Prompts
 
 * “How do interest rate changes affect bond prices?”
 * “What is diversification and why does it matter?”
 * “Explain the 50/30/20 budgeting rule.”
-* “What are the most common scams in 2025?”
-* “Describe the Sharpe ratio with a simple example.”
+* “What are the most common investment scams in 2025?”
+* “Describe the Sharpe ratio in simple terms.”
 * “How do stablecoins maintain their value?”
 
 ---
@@ -153,32 +146,33 @@ tiktoken
 
 ## 🌐 Deployment
 
-You can deploy this application easily on:
+The app is optimized for:
 
-* **Streamlit Cloud** → zero-setup hosting
-* **Docker + Groq API** → enterprise-grade reproducibility
-* **Azure App Service / AWS Elastic Beanstalk** → scalable corporate hosting
+* **Streamlit Cloud** – zero setup, live in seconds
+* **Docker + Groq API** – enterprise-grade portability
+* **Azure / AWS App Service** – scalable hosting for teams
 
 ---
 
 ## 🧭 Compliance & Ethics
 
-* No recommendations, predictions, or investment guidance
-* Educational use only
-* All outputs filtered through LangChain prompt safety and contextual moderation
+* Educational content only — **no financial, tax, or investment advice**
+* Uses system prompts to enforce responsible, factual, and safe answers
+* Respects Groq & LangChain model safety standards
 
 ---
 
-## 🧑‍💻 Author
+## 👩‍💻 Author
 
 **Lavanya Srivastava**
-Built with ❤️ using Groq + LangChain + Streamlit
-[LinkedIn Profile](https://www.linkedin.com/in/lavanya-srivastava/)
+💡 AI Developer | Generative AI & Agentic Systems Educator
+📧 [lavanaya.srivastava@gmail.com](mailto:lavanaya.srivastava@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/lavanya-srivastava/)
 
 ---
 
-```
 © 2025 Lavanya Srivastava. All rights reserved.
+
 ```
 
 ---
