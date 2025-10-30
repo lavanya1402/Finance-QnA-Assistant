@@ -1,0 +1,5 @@
+streamlit
+python-dotenv
+langchain>=0.2.0
+langchain-groq>=0.1.4
+tiktoken
