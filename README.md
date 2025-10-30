@@ -183,4 +183,4 @@ Built with ❤️ using Groq + LangChain + Streamlit
 
 ---
 
-Would you like me to generate a **banner image** for your GitHub page — e.g. a light-themed cover showing “Finance Q&A Assistant 💹 | Groq + LangChain + Streamlit” with a subtle finance dashboard background? It makes your repo stand out in search results.
+
